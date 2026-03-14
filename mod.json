@@ -1,0 +1,7 @@
+{
+    "$schema": "../config-schema.json",
+    "name": "Extended Formulae",
+    "description": "Extend formulae for Horadric Cube transmuting.",
+    "author": "Garrett HE",
+    "version": "0.1.0"
+}
