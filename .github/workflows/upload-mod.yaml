@@ -1,0 +1,40 @@
+name: Upload Mod to NexusMods
+
+on:
+  release:
+    types: [ published ]
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version number for the release'
+        required: true
+      description:
+        description: 'Description for the release'
+        required: false
+        default: "Add various new items to the vendor sales list in the game."
+      file_category:
+        description: "File category for the release"
+        required: false
+        default: "main"
+
+jobs:
+  upload-to-nexusmods:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Zip mod files
+        run: cd src && zip -r ../SuperVendors.zip .
+
+      - name: Upload mod to NexusMods
+        id: upload
+        uses: Nexus-Mods/upload-action@main
+        with:
+          api_key: ${{ secrets.NEXUSMODS_API_KEY }}
+          file_group_id: ${{ vars.NEXUSMODS_FILE_GROUP_ID }}
+          filename: SuperVendors.zip
+          version: ${{ github.event.release.tag_name || github.event.inputs.version }}
+          display_name: SuperVendors ${{ github.event.inputs.version }} D2RMM
+          description: ${{ github.event.inputs.description }}
+          file_category: ${{ github.event.inputs.file_category }}
