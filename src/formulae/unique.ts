@@ -1,12 +1,10 @@
-export default [
+const formulae = [
     {inputs: ["weap", "isc"], output: "usetype,uni"},
     {inputs: ["armo", "isc"], output: "usetype,uni"},
     {inputs: ["amul", "isc"], output: "usetype,uni"},
     {inputs: ["ring", "isc"], output: "usetype,uni"},
 
     // Charms
-    {inputs: ["cm1", "isc"], output: "Annihilus"},
-    {inputs: ["cm2", "isc"], output: "Hellfire Torch"},
     {inputs: ["cm3", "isc"], output: "usetype,uni"},
     {inputs: ["cm3", "gpb"], output: "Cold Rupture"},
     {inputs: ["cm3", "gpr"], output: "Flame Rift"},
@@ -23,10 +21,52 @@ export default [
 
     // Jewels
     {inputs: ["jew", "isc"], output: "usetype,uni"},
-    {inputs: ["jew", "gpg"], output: "Defender's Bile"},
-    {inputs: ["jew", "gpy"], output: "Guardian's Thunder"},
-    {inputs: ["jew", "gpb"], output: "Protector's Frost"},
-    {inputs: ["jew", "gpr"], output: "Defender's Fire"},
-    {inputs: ["jew", "skz"], output: "Protector's Stone"},
-    {inputs: ["jew", "gpv"], output: "Guardian's Light"},
 ];
+
+const spawns = [];
+
+if (config.annihilusEnabled) {
+    spawns.push("Annihilus");
+    formulae.push({inputs: ["cm1", "isc"], output: "Annihilus"});
+}
+
+if (config.hellfireTorchEnabled) {
+    spawns.push("Hellfire Torch");
+    formulae.push({inputs: ["cm2", "isc"], output: "Hellfire Torch"});
+}
+
+if (config.colossalJewelsEnabled) {
+    [
+        "Defender's Bile",
+        "Guardian's Thunder",
+        "Protector's Frost",
+        "Defender's Fire",
+        "Protector's Stone",
+        "Guardian's Light",
+    ].forEach(jewel => spawns.push(jewel));
+
+    [
+        {inputs: ["jew", "gpg"], output: "Defender's Bile"},
+        {inputs: ["jew", "gpy"], output: "Guardian's Thunder"},
+        {inputs: ["jew", "gpb"], output: "Protector's Frost"},
+        {inputs: ["jew", "gpr"], output: "Defender's Fire"},
+        {inputs: ["jew", "skz"], output: "Protector's Stone"},
+        {inputs: ["jew", "gpv"], output: "Guardian's Light"},
+    ].forEach(f => formulae.push(f));
+}
+
+if (spawns.length > 0) {
+    const filename = "global\\excel\\uniqueitems.txt";
+    const content = D2RMM.readTsv(filename);
+
+    content.rows.forEach(row => {
+        if (spawns.includes(row["index"])) {
+            row["spawnable"] = "1";
+            row["lvl"] = "85";
+        }
+    });
+
+    D2RMM.writeTsv(filename, content);
+}
+
+export default formulae;

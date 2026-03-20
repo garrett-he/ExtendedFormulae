@@ -9,9 +9,9 @@ export default [
     // Rare
     {inputs: ["weap,rar"], output: "usetype,rar"},
     {inputs: ["armo,rar"], output: "usetype,rar"},
-    {inputs: ["amul,rar"], output: "usetype,uni"},
-    {inputs: ["ring,rar"], output: "usetype,uni"},
-    {inputs: ["jew,rar"], output: "usetype,uni"},
+    {inputs: ["amul,rar"], output: "usetype,rar"},
+    {inputs: ["ring,rar"], output: "usetype,rar"},
+    {inputs: ["jew,rar"], output: "usetype,rar"},
 
     // Unique
     {inputs: ["amul,uni"], output: "usetype,uni"},

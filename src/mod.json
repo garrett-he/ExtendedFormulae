@@ -4,5 +4,33 @@
     "description": "Extend formulae for Horadric Cube transmuting.",
     "author": "Garrett HE",
     "website": "https://github.com/garrett-he/ExtendedFormulae",
-    "version": "1.0.0"
+    "version": "1.1.0",
+    "config": [
+        {
+            "id": "sectionUnique",
+            "type": "section",
+            "name": "Unique Formulae"
+        },
+        {
+            "id": "annihilusEnabled",
+            "type": "checkbox",
+            "name": "Annihilus Enabled",
+            "description": "Enabling this option will cause ordinary monsters to drop Annihilus as well.",
+            "defaultValue": false
+        },
+        {
+            "id": "hellfireTorchEnabled",
+            "type": "checkbox",
+            "name": "Hellfire Touch Enable",
+            "description": "Enabling this option will cause ordinary monsters to drop Hellfire Torches as well.",
+            "defaultValue": false
+        },
+        {
+            "id": "colossalJewelsEnabled",
+            "type": "checkbox",
+            "name": "Colossal Jewels Enable",
+            "description": "Enabling this option will cause ordinary monsters to drop Colossal Jewels as well.",
+            "defaultValue": false
+        }
+    ]
 }

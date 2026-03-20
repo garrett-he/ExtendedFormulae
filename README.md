@@ -8,6 +8,19 @@ Extend formulae for Horadric Cube transmuting.
 
 * Any Weapon/Armor/Amulet/Ring + Scroll of Identity -> Unique Item
 
+**Note:**
+
+1. Due to the game's mechanics, a specified unique item can only drop once a
+   game. So, once you've obtained a unique item by Horadric Cube or magic
+   founding, this formula will cease to be effective.
+2. For items that comes in different unique versions, such as amulets, rings,
+   jewels, etc., when you use this formula to generate a unique item for the
+   second time, you'll notice that it turns into a rare item instead. You'll
+   need to keep applying the formula to transmute it into a unique item of a
+   different form.
+
+#### Immunity Charms
+
 * Grand Charm + Perfect Ruby -> Flame Rift
 * Grand Charm + Perfect Topaz -> Crack of the Heavens
 * Grand Charm + Perfect Sapphire -> Cold Rupture
@@ -18,9 +31,29 @@ Extend formulae for Horadric Cube transmuting.
 * Grand Charm + Perfect Ruby + Scroll of Identity -> Crafted Flame Rift
 * Grand Charm + Perfect Topaz + Scroll of Identity -> Crafted Crack of the
 * Grand Charm + Perfect Sapphire + Scroll of Identity -> Crafted Cold Rupture
-* Grand Charm + Perfect Emerald + Scroll of Identity -> Crafted Rotting Fissure Heavens
+* Grand Charm + Perfect Emerald + Scroll of Identity -> Crafted Rotting Fissure
+  Heavens
 * Grand Charm + Perfect Skull + Scroll of Identity -> Crafted Bone Break
 * Grand Charm + Perfect Amethyst + Scroll of Identity -> Crafted Black Cleft
+
+#### Skill Charms
+
+_should be enabled in mod settings_
+
+* Small Charm + Scroll of Identity -> Annihilus
+* Large Charm + Scroll of Identity -> Hellfire Torch
+
+**Note:**
+
+1. Due to game mechanics, you can just keep one Annihilus/Hellfire Torch in your
+   inventory or stash. Please make sure neither these items is currently in your
+   inventory or stash before proceeding._
+2. Enabling Annihilus or Hellfire Torch transmuting will cause ordinary monsters
+   to drop them as well.
+
+#### Colossal Jewels
+
+_should be enabled in mod settings_
 
 * Any Jewel + Perfect Ruby -> Defender's Fire
 * Any Jewel + Perfect Topaz -> Guardian's Thunder
@@ -31,14 +64,8 @@ Extend formulae for Horadric Cube transmuting.
 
 **Note:**
 
-1. This formula can be used to transmute both Hellfire Torch and Annihilus.
-   However, due to game mechanics, please make sure neither item is currently in
-   your inventory or stash before proceeding.
-2. Due to the game's mechanics, a specified unique item can only drop once a game. So, once you've obtained a unique
-   item by Horadric Cube or magic founding, this formula will cease to be effective.
-3. For items that comes in different unique versions, such as amulets, rings, jewels, etc., when you use this formula to
-   generate a unique item for the second time, you'll notice that it turns into a rare item instead. You'll need to keep
-   applying the formula to transmute it into a unique item of a different version.
+1. Enabling Colossal Jewels transmuting will cause ordinary monsters to drop
+   them as well.
 
 ### Sets
 
@@ -76,10 +103,15 @@ Extend formulae for Horadric Cube transmuting.
 ### Portals
 
 * Tome of Town Portal -> Cow Portal
-* Tome of Town Portal + Scroll of Identity -> Pandemonium Portal
-* Tome of Town Portal + Stamina Potion -> Pandemonium Finale Portal
-* Tome of Town Portal + Thawing Potion -> Colossal Summit Portal
+* Tome of Town Portal + Stamina Potion -> Pandemonium Portal
+* Tome of Town Portal + Thawing Potion -> Pandemonium Finale Portal
+* Tome of Town Portal + Antidote Potion -> Colossal Summit Portal
 
 ### Miscellaneous
 
 * Scroll of Identity + Scroll of Town Portal -> Token of Absolution
+* El (Rune #1) + Key -> Western Worldstone Shard
+* Eld (Rune #2) + Key -> Eastern Worldstone Shard
+* Tir (Rune #3) + Key -> Southern Worldstone Shard
+* Nef (Rune #4) + Key -> Deep Worldstone Shard
+* Eth (Rune #5) + Key -> Northern Worldstone Shard
