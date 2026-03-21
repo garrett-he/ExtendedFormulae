@@ -2,6 +2,7 @@ import {checkFormulaeDuplicates, Formula} from "./lib/formulae";
 import {appendFormulae} from "./lib/cubemain";
 
 import etherealFormulae from "./formulae/ethereal";
+import magicalFormulae from "./formulae/magical/index";
 import miscFormulae from "./formulae/misc";
 import portalFormulae from "./formulae/portal";
 import rerollingFormulae from "./formulae/rerolling";
@@ -14,6 +15,7 @@ import upgradeFormulae from "./formulae/upgrade";
 
 const formulae: Formula[] = [
     ...etherealFormulae,
+    ...magicalFormulae,
     ...miscFormulae,
     ...portalFormulae,
     ...rerollingFormulae,

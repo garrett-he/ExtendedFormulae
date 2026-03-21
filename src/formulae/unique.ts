@@ -6,18 +6,18 @@ const formulae = [
 
     // Charms
     {inputs: ["cm3", "isc"], output: "usetype,uni"},
-    {inputs: ["cm3", "gpb"], output: "Cold Rupture"},
-    {inputs: ["cm3", "gpr"], output: "Flame Rift"},
-    {inputs: ["cm3", "gpy"], output: "Crack of the Heavens"},
-    {inputs: ["cm3", "gpg"], output: "Rotting Fissure"},
-    {inputs: ["cm3", "skz"], output: "Bone Break"},
-    {inputs: ["cm2", "gpv"], output: "Black Cleft"},
-    {inputs: ["cm3", "gpb", "isc"], output: "Crafted Cold Rupture"},
-    {inputs: ["cm3", "gpr", "isc"], output: "Crafted Flame Rift"},
-    {inputs: ["cm3", "gpy", "isc"], output: "Crafted Crack of the Heavens"},
-    {inputs: ["cm3", "gpg", "isc"], output: "Crafted Rotting Fissure"},
-    {inputs: ["cm3", "skz", "isc"], output: "Crafted Bone Break"},
-    {inputs: ["cm3", "gpv", "isc"], output: "Crafted Black Cleft"},
+    {inputs: ["cm3", "gpb", "isc"], output: "Cold Rupture"},
+    {inputs: ["cm3", "gpr", "isc"], output: "Flame Rift"},
+    {inputs: ["cm3", "gpy", "isc"], output: "Crack of the Heavens"},
+    {inputs: ["cm3", "gpg", "isc"], output: "Rotting Fissure"},
+    {inputs: ["cm3", "skz", "isc"], output: "Bone Break"},
+    {inputs: ["cm2", "gpv", "isc"], output: "Black Cleft"},
+    {inputs: ["cm3", "gpb", "jew", "isc"], output: "Crafted Cold Rupture"},
+    {inputs: ["cm3", "gpr", "jew", "isc"], output: "Crafted Flame Rift"},
+    {inputs: ["cm3", "gpy", "jew", "isc"], output: "Crafted Crack of the Heavens"},
+    {inputs: ["cm3", "gpg", "jew", "isc"], output: "Crafted Rotting Fissure"},
+    {inputs: ["cm3", "skz", "jew", "isc"], output: "Crafted Bone Break"},
+    {inputs: ["cm3", "gpv", "jew", "isc"], output: "Crafted Black Cleft"},
 
     // Jewels
     {inputs: ["jew", "isc"], output: "usetype,uni"},
@@ -46,12 +46,12 @@ if (config.colossalJewelsEnabled) {
     ].forEach(jewel => spawns.push(jewel));
 
     [
-        {inputs: ["jew", "gpg"], output: "Defender's Bile"},
-        {inputs: ["jew", "gpy"], output: "Guardian's Thunder"},
-        {inputs: ["jew", "gpb"], output: "Protector's Frost"},
-        {inputs: ["jew", "gpr"], output: "Defender's Fire"},
-        {inputs: ["jew", "skz"], output: "Protector's Stone"},
-        {inputs: ["jew", "gpv"], output: "Guardian's Light"},
+        {inputs: ["jew", "gpg", "isc"], output: "Defender's Bile"},
+        {inputs: ["jew", "gpy", "isc"], output: "Guardian's Thunder"},
+        {inputs: ["jew", "gpb", "isc"], output: "Protector's Frost"},
+        {inputs: ["jew", "gpr", "isc"], output: "Defender's Fire"},
+        {inputs: ["jew", "skz", "isc"], output: "Protector's Stone"},
+        {inputs: ["jew", "gpv", "isc"], output: "Guardian's Light"},
     ].forEach(f => formulae.push(f));
 }
 

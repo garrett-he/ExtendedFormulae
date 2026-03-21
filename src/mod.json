@@ -4,7 +4,7 @@
     "description": "Extend formulae for Horadric Cube transmuting.",
     "author": "Garrett HE",
     "website": "https://github.com/garrett-he/ExtendedFormulae",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "config": [
         {
             "id": "sectionUnique",
